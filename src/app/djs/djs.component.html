@@ -27,8 +27,8 @@
                 {{ day.name }} &ndash; {{ session.name }}
               </th>
             </tr>
-            <ng-container *ngFor="let slot of session.slots">
-              <tr *ngIf="slot.dj === system.djName">
+            <ng-container *ngFor="let slot of slots(session)">
+              <tr>
                 <td>
                   <div>
                     <b>{{

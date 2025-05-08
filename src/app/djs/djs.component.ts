@@ -22,4 +22,13 @@ export class DJsComponent {
     }
     return found;
   }
+  slots(session: Timetable.Session) {
+    return session.slots
+      .filter((slot) => {
+        return slot.dj === this.system.djName;
+      })
+      .sort((a, b) => {
+        return a.start > b.start ? 1 : a.start < b.start ? -1 : 0;
+      });
+  }
 }

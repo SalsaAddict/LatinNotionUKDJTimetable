@@ -104,9 +104,9 @@ export class Timetable {
               notes: 'Shows'
             },
             { room: 'Bachata', start: 23, duration: 1, dj: 'Daniel Chong' },
-            { room: 'Bachata', start: 24, duration: 1, dj: 'Pierre' },
+            { room: 'Bachata', start: 24, duration: 1, dj: 'Julian MrM' },
             { room: 'Bachata', start: 25, duration: 1, dj: 'Chino' },
-            { room: 'Bachata', start: 26, duration: 1, dj: 'Julian MrM' },
+            { room: 'Bachata', start: 26, duration: 1, dj: 'Pierre' },
             { room: 'Bachata', start: 27, duration: 1, dj: 'Shahid' },
             {
               room: 'Salsa',
@@ -155,9 +155,9 @@ export class Timetable {
               dj: 'Pierre',
               notes: 'Jack & Jill<br>Open Competition'
             },
-            { room: 'Bachata', start: 23, duration: 1, dj: 'Oreo Sensual' },
+            { room: 'Bachata', start: 23, duration: 1, dj: 'Julian MrM' },
             { room: 'Bachata', start: 24, duration: 1, dj: 'Chino' },
-            { room: 'Bachata', start: 25, duration: 1, dj: 'Julian MrM' },
+            { room: 'Bachata', start: 25, duration: 1, dj: 'Oreo Sensual' },
             { room: 'Bachata', start: 26, duration: 1, dj: 'Farsh' },
             {
               room: 'Salsa',
