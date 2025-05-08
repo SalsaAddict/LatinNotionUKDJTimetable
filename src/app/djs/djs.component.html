@@ -1,8 +1,58 @@
-<div class="container">
-  <div ngbDropdown class="d-inline-block"></div>
-  @for (day of system.timetable.days; track day.date) { @if (isBusyDay(day)) {
-  <div class="mb-5">
-    <h1>{{ day.date | date : 'EEEE' }}</h1>
+<div class="container-fluid container-md text-uppercase">
+  <div class="d-flex justify-content-center mb-3">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        id="djDropdown"
+        ngbDropdownToggle>
+        Schedule for DJ {{ system.djName }}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="djDropdown">
+        <ng-container *ngFor="let dj of system.timetable.djs">
+          <button ngbDropdownItem (click)="system.setDjName(dj)">
+            {{ dj }}
+          </button>
+        </ng-container>
+      </div>
+    </div>
   </div>
-  } }
+  <table class="table table-bordered text-center align-middle text-nowrap">
+    <tbody>
+      <ng-container *ngFor="let day of system.timetable.days">
+        <ng-container *ngFor="let session of day.sessions">
+          <ng-container *ngIf="isBusySession(session)">
+            <tr class="table-secondary">
+              <th class="text-primary-emphasis" colspan="3">
+                {{ day.name }} &ndash; {{ session.name }}
+              </th>
+            </tr>
+            <ng-container *ngFor="let slot of session.slots">
+              <tr *ngIf="slot.dj === system.djName">
+                <td>
+                  <div>
+                    <b>{{
+                      system.timetable.period(slot.start, slot.duration)
+                    }}</b>
+                  </div>
+                  <div>
+                    <small class="text-muted">{{ slot.duration }} hrs</small>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <b>{{ slot.room }}</b>
+                  </div>
+                  <div *ngIf="slot.notes">
+                    <small [innerHTML]="slot.notes" class="text-muted"></small>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
 </div>

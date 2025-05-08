@@ -1,10 +1,12 @@
+import { DatePipe, formatDate } from '@angular/common';
+
 export class Timetable {
   get djs() {
     return Timetable.DJNames.map((value) => value).sort();
   }
   days: Timetable.Day[] = [
     {
-      date: new Date('2025-05-15'),
+      name: 'Thursday',
       sessions: [
         {
           name: 'Boat Party',
@@ -24,7 +26,7 @@ export class Timetable {
       ]
     },
     {
-      date: new Date('2025-05-16'),
+      name: 'Friday',
       sessions: [
         {
           name: 'Afternoon Social',
@@ -32,8 +34,9 @@ export class Timetable {
           duration: 4,
           rooms: ['Mixed SBK'],
           slots: [
-            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Farsh' },
-            { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Chino' }
+            { room: 'Mixed SBK', start: 16, duration: 1, dj: 'Farsh' },
+            { room: 'Mixed SBK', start: 17, duration: 1, dj: 'Chino' },
+            { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Ami Emirato' }
           ]
         },
         {
@@ -49,7 +52,8 @@ export class Timetable {
               dj: 'Shahid',
               notes: 'Jack & Jill<br>Pro Competition'
             },
-            { room: 'Bachata', start: 23, duration: 3, dj: 'Pierre' },
+            { room: 'Bachata', start: 23, duration: 2, dj: 'Pierre' },
+            { room: 'Bachata', start: 25, duration: 1, dj: 'Shahid' },
             { room: 'Bachata', start: 26, duration: 1, dj: 'Peynao' },
             { room: 'Bachata', start: 27, duration: 1, dj: 'Farsh' },
             {
@@ -61,8 +65,9 @@ export class Timetable {
             },
             { room: 'Salsa', start: 23, duration: 2, dj: 'Julian the Duke' },
             { room: 'Salsa', start: 25, duration: 2, dj: 'Mauricio' },
-            { room: 'Cuban', start: 21, duration: 3, dj: 'Massimo' },
-            { room: 'Cuban', start: 24, duration: 3, dj: 'Javier La Rosa' },
+            { room: 'Cuban', start: 21, duration: 2, dj: 'Massimo' },
+            { room: 'Cuban', start: 23, duration: 2, dj: 'Javier La Rosa' },
+            { room: 'Cuban', start: 25, duration: 2, dj: 'Junior' },
             { room: 'Kizomba', start: 21, duration: 2, dj: 'Qas' },
             { room: 'Kizomba', start: 23, duration: 1, dj: 'Jeydikson' },
             { room: 'Kizomba', start: 24, duration: 2, dj: 'Shark' },
@@ -72,7 +77,7 @@ export class Timetable {
       ]
     },
     {
-      date: new Date('2025-05-17'),
+      name: 'Saturday',
       sessions: [
         {
           name: 'Afternoon Social',
@@ -81,7 +86,7 @@ export class Timetable {
           rooms: ['Mixed SBK'],
           slots: [
             { room: 'Mixed SBK', start: 14, duration: 2, dj: 'Davide' },
-            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Shahid' },
+            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Junior' },
             { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Farsh' }
           ]
         },
@@ -103,16 +108,16 @@ export class Timetable {
             { room: 'Bachata', start: 25, duration: 1, dj: 'Chino' },
             { room: 'Bachata', start: 26, duration: 1, dj: 'Julian MrM' },
             { room: 'Bachata', start: 27, duration: 1, dj: 'Shahid' },
-            { room: 'Salsa', start: 21, duration: 2, dj: 'Ami Emirato' },
-            { room: 'Salsa', start: 23, duration: 2, dj: 'Julian the Duke' },
-            { room: 'Salsa', start: 25, duration: 2, dj: 'Fadi K' },
             {
-              room: 'Cuban',
+              room: 'Salsa',
               start: 21,
               duration: 2,
               dj: 'Ramiro',
-              notes: 'Cuban Salsa & Bachata<br>during shows'
+              notes: 'Salsa & Bachata<br>during shows'
             },
+            { room: 'Salsa', start: 23, duration: 2, dj: 'Julian the Duke' },
+            { room: 'Salsa', start: 25, duration: 2, dj: 'Fadi K' },
+            { room: 'Cuban', start: 21, duration: 2, dj: 'Junior' },
             { room: 'Cuban', start: 23, duration: 2, dj: 'Davide' },
             { room: 'Cuban', start: 25, duration: 2, dj: 'Javier La Rosa' },
             { room: 'Kizomba', start: 21, duration: 2, dj: 'Super Dixon' },
@@ -124,7 +129,7 @@ export class Timetable {
       ]
     },
     {
-      date: new Date('2025-05-18'),
+      name: 'Sunday',
       sessions: [
         {
           name: 'Afternoon Social',
@@ -163,8 +168,8 @@ export class Timetable {
             },
             { room: 'Salsa', start: 23, duration: 2, dj: 'Julian the Duke' },
             { room: 'Salsa', start: 25, duration: 2, dj: 'Fadi K' },
-            { room: 'Cuban', start: 21, duration: 3, dj: 'Moe Flex' },
-            { room: 'Cuban', start: 24, duration: 3, dj: 'Davide' },
+            { room: 'Cuban', start: 21, duration: 3, dj: 'Davide' },
+            { room: 'Cuban', start: 24, duration: 3, dj: 'Moe Flex' },
             { room: 'Kizomba', start: 21, duration: 2, dj: 'Jeydikson' },
             { room: 'Kizomba', start: 23, duration: 1, dj: 'Super Dixon' },
             { room: 'Kizomba', start: 24, duration: 2, dj: 'Shark' },
@@ -174,11 +179,22 @@ export class Timetable {
       ]
     }
   ];
+  date(hour: number) {
+    return new Date(new Date(0).setHours(hour));
+  }
+  period(start: number, duration: number) {
+    return (
+      formatDate(this.date(start), 'HH:mm', 'en-GB', '+0100') +
+      ' - ' +
+      formatDate(this.date(start + duration), 'HH:mm', 'en-GB', '+0100')
+    );
+  }
 }
 
 export namespace Timetable {
+  export type Days = 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
   export interface Day {
-    date: Date;
+    name: Days;
     sessions: Session[];
   }
   export interface Period {
@@ -219,7 +235,8 @@ export namespace Timetable {
     'Ami Emirato',
     'Fadi K',
     'Moe Flex',
-    'Roger Cracco'
+    'Roger Cracco',
+    'Junior'
   ] as const;
   export type DJs = (typeof DJNames)[number];
 }

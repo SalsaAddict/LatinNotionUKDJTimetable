@@ -4,34 +4,22 @@ import { CommonModule } from '@angular/common';
 import { SystemService } from '../system.service';
 import { Timetable } from '../timetable';
 
-interface DJSlot extends Timetable.Slot {
-  date: Date;
-  session: Timetable.SessionName;
-}
-
 @Component({
   selector: 'app-djs',
   imports: [CommonModule, NgbDropdownModule],
-  templateUrl: './djs.component.html'
+  templateUrl: './djs.component.html',
+  styleUrl: './djs.component.css'
 })
 export class DJsComponent {
   constructor(readonly system: SystemService) {}
-  isBusyDay(day: Timetable.Day) {
+  isBusySession(session: Timetable.Session) {
     let found = false;
-    for (let iSession = 0; iSession < day.sessions.length; iSession++) {
-      for (
-        let iSlot = 0;
-        iSlot < day.sessions[iSession].slots.length;
-        iSlot++
-      ) {
-        if (day.sessions[iSession].slots[iSlot].dj === this.system.djName) {
-          found = true;
-          break;
-        }
+    for (let i = 0; i < session.slots.length; i++) {
+      if (session.slots[i].dj === this.system.djName) {
+        found = true;
+        break;
       }
-      if (found) break;
     }
     return found;
   }
-  isBusySession(session: Timetable.Session) {}
 }

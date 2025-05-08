@@ -18,14 +18,8 @@ export class TimetableComponent {
     readonly system: SystemService,
     private readonly datePipe: DatePipe
   ) {}
-  set day(day: Timetable.Day) {
-    this.system.dayIndex = this.system.timetable.days.indexOf(day);
-  }
   get day() {
     return this.system.timetable.days[this.system.dayIndex];
-  }
-  date(hour: number) {
-    return new Date(this.day.date.setHours(hour));
   }
   hours(session: Timetable.Session) {
     let items: number[] = [];
@@ -33,9 +27,6 @@ export class TimetableComponent {
       items.push(session.start + i);
     }
     return items;
-  }
-  end(start: Date) {
-    return this.date(start.getHours() + 1);
   }
   slot(session: Timetable.Session, room: Timetable.Rooms, hour: number) {
     let item = session.slots.find((item) => {
@@ -49,12 +40,5 @@ export class TimetableComponent {
       return item;
     }
     return;
-  }
-  period(start: number, duration: number) {
-    return (
-      this.datePipe.transform(this.date(start), 'HH:mm') +
-      ' - ' +
-      this.datePipe.transform(this.date(start + duration), 'HH:mm')
-    );
   }
 }

@@ -1,14 +1,13 @@
 <div class="container-fluid text-center text-uppercase">
   <div class="btn-group mb-3">
-    @for (current of system.timetable.days; track current.date) {
     <button
+      *ngFor="let today of system.timetable.days; let i = index"
       type="button"
       class="btn btn-outline-secondary text-uppercase"
-      [class.active]="day === current"
-      (click)="day = current">
-      {{ current.date | date : 'EEE' }}
+      [class.active]="day === today"
+      (click)="system.setDayIndex(i)">
+      {{ today.name | slice : 0 : 3 }}
     </button>
-    }
   </div>
   <div *ngFor="let session of day.sessions">
     <h1 class="text-primary-emphasis">{{ session.name }}</h1>
@@ -27,13 +26,15 @@
         <tbody>
           <tr *ngFor="let hour of hours(session)">
             <th width="10%" class="text-primary-emphasis">
-              {{ period(hour, 1) }}
+              {{ system.timetable.period(hour, 1) }}
             </th>
             @for (room of session.rooms; track room) { @let item =
             slot(session,room, hour); @if (item !== null) { @if (item) {
             <td [rowSpan]="item.duration" class="bg-light">
               <div
-                [ngbPopover]="period(item.start, item.duration)"
+                [ngbPopover]="
+                  system.timetable.period(item.start, item.duration)
+                "
                 [popoverTitle]="item.duration + ' hour(s)'">
                 <div>
                   <b [innerHTML]="item?.dj"></b>
