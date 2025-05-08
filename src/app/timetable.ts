@@ -34,8 +34,7 @@ export class Timetable {
           duration: 4,
           rooms: ['Mixed SBK'],
           slots: [
-            { room: 'Mixed SBK', start: 16, duration: 1, dj: 'Farsh' },
-            { room: 'Mixed SBK', start: 17, duration: 1, dj: 'Chino' },
+            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Farsh' },
             { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Ami Emirato' }
           ]
         },
