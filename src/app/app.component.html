@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand bg-body-secondary fixed-top text-uppercase">
+  <div class="container-fluid">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/timetable']"
+          routerLinkActive="active"
+          ><b>Timetable</b></a
+        >
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" [routerLink]="['/djs']" routerLinkActive="active"
+          ><b>DJs</b></a
+        >
+      </li>-->
+    </ul>
+  </div>
+</nav>
+<router-outlet />

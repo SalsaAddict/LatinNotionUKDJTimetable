@@ -1,0 +1,8 @@
+<div class="container">
+  <div ngbDropdown class="d-inline-block"></div>
+  @for (day of system.timetable.days; track day.date) { @if (isBusyDay(day)) {
+  <div class="mb-5">
+    <h1>{{ day.date | date : 'EEEE' }}</h1>
+  </div>
+  } }
+</div>

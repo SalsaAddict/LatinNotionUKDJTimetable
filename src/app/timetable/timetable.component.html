@@ -1,0 +1,56 @@
+<div class="container-fluid text-center text-uppercase">
+  <div class="btn-group mb-3">
+    @for (current of system.timetable.days; track current.date) {
+    <button
+      type="button"
+      class="btn btn-outline-secondary text-uppercase"
+      [class.active]="day === current"
+      (click)="day = current">
+      {{ current.date | date : 'EEE' }}
+    </button>
+    }
+  </div>
+  <div *ngFor="let session of day.sessions">
+    <h1 class="text-primary-emphasis">{{ session.name }}</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle text-nowrap">
+        <thead>
+          <tr>
+            <th width="10%"></th>
+            <th
+              *ngFor="let room of session.rooms"
+              class="text-primary-emphasis">
+              {{ room }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hour of hours(session)">
+            <th width="10%" class="text-primary-emphasis">
+              {{ period(hour, 1) }}
+            </th>
+            @for (room of session.rooms; track room) { @let item =
+            slot(session,room, hour); @if (item !== null) { @if (item) {
+            <td [rowSpan]="item.duration" class="bg-light">
+              <div
+                [ngbPopover]="period(item.start, item.duration)"
+                [popoverTitle]="item.duration + ' hour(s)'">
+                <div>
+                  <b [innerHTML]="item?.dj"></b>
+                </div>
+                <div *ngIf="item?.notes">
+                  <small class="text-muted" [innerHTML]="item?.notes"></small>
+                </div>
+              </div>
+            </td>
+            } @else {
+            <td class="bg-secondary-subtle text-muted text-uppercase small">
+              Closed
+            </td>
+            } } }
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
