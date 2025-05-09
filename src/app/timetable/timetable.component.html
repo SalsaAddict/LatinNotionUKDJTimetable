@@ -1,5 +1,5 @@
 <div class="container-fluid container-lg text-center text-uppercase">
-  <div class="btn-group mb-3">
+  <div class="btn-group mb-3 bg-white">
     <button
       *ngFor="let today of system.timetable.days; let i = index"
       type="button"
@@ -10,7 +10,9 @@
     </button>
   </div>
   <div *ngFor="let session of day.sessions">
-    <h1 class="text-primary-emphasis">{{ session.name }}</h1>
+    <h1 class="text-white">
+      <b>{{ session.name }}</b>
+    </h1>
     <div class="table-responsive">
       <table class="table table-bordered text-center align-middle text-nowrap">
         <thead>
