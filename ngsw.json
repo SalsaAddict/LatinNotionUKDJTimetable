@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746787004284,
+  "timestamp": 1746792897708,
   "index": "/LatinNotionUKDJTimetable/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/LatinNotionUKDJTimetable/favicon.ico",
         "/LatinNotionUKDJTimetable/index.html",
-        "/LatinNotionUKDJTimetable/main-XYA5V4TI.js",
+        "/LatinNotionUKDJTimetable/main-SPOOMA5P.js",
         "/LatinNotionUKDJTimetable/manifest.webmanifest",
         "/LatinNotionUKDJTimetable/polyfills-A2F2TZET.js",
         "/LatinNotionUKDJTimetable/styles-4W7GQXTV.css"
@@ -40,9 +40,9 @@
     "/LatinNotionUKDJTimetable/background.avif": "e8374bcf2d19e13f07cacfd182a8e730610e071c",
     "/LatinNotionUKDJTimetable/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/LatinNotionUKDJTimetable/icons/icon-172x172.png": "2c97ad90df3a8d6c1a756defe1b1eda8e5bdcff5",
-    "/LatinNotionUKDJTimetable/index.html": "84def0cce2433352540b62c87bd7c13eaa6f1bba",
+    "/LatinNotionUKDJTimetable/index.html": "c6f8f2e27348da477228242e650268e10c0ce4c6",
     "/LatinNotionUKDJTimetable/logo.avif": "10f2f91a8d7959cdc48a2dcad5332c77dfcff22c",
-    "/LatinNotionUKDJTimetable/main-XYA5V4TI.js": "e6d8b5b6e965c010afbfe1a62ba0f2579b1038fe",
+    "/LatinNotionUKDJTimetable/main-SPOOMA5P.js": "c18493ea7410ad3b40b9ed3597b4a024492af00d",
     "/LatinNotionUKDJTimetable/manifest.webmanifest": "ad95fa3309f0f42fc64f4675d6ed3437a664f06a",
     "/LatinNotionUKDJTimetable/polyfills-A2F2TZET.js": "7e057933ecbc37b376b98c83897cb54dfef99320",
     "/LatinNotionUKDJTimetable/styles-4W7GQXTV.css": "eef732e40a6b5d8ce8647b5d9fb1034cf0400745"
