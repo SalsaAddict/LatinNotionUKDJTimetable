@@ -4,6 +4,9 @@ export class Timetable {
   get djs() {
     return Timetable.DJNames.map((value) => value).sort();
   }
+  get dayNames() {
+    return Timetable.DayNames.map((value) => value);
+  }
   days: Timetable.Day[] = [
     {
       name: 'Thursday',
@@ -196,7 +199,8 @@ export class Timetable {
 }
 
 export namespace Timetable {
-  export type Days = 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
+  export const DayNames = ['Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
+  export type Days = (typeof DayNames)[number];
   export interface Day {
     name: Days;
     sessions: Session[];

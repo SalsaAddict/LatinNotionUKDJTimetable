@@ -1,5 +1,5 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   NgbDropdownModule,
   NgbPopoverModule
@@ -13,11 +13,26 @@ import { SystemService } from '../system.service';
   providers: [DatePipe],
   templateUrl: './timetable.component.html'
 })
-export class TimetableComponent {
+export class TimetableComponent implements OnInit {
+  @Input() dayParam?: string;
   constructor(
     readonly system: SystemService,
     private readonly datePipe: DatePipe
   ) {}
+  ngOnInit(): void {
+    if (this.dayParam) {
+      let abbr = this.dayParam.substring(0, 3).toLowerCase();
+      let dayNames = this.system.timetable.dayNames;
+      for (let i = 0; i < dayNames.length; i++) {
+        if (dayNames[i].substring(0, 3).toLowerCase() === abbr) {
+          console.log('match', abbr, dayNames[i]);
+          this.dayParam = dayNames[i];
+          this.system.setDayIndex(i);
+          break;
+        }
+      }
+    }
+  }
   get day() {
     return this.system.timetable.days[this.system.dayIndex];
   }
