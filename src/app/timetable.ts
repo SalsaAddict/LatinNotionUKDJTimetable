@@ -34,8 +34,8 @@ export class Timetable {
           duration: 4,
           rooms: ['Mixed SBK'],
           slots: [
-            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Farsh' },
-            { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Ami Emirato' }
+            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Shahid' },
+            { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Farsh' }
           ]
         },
         {
@@ -114,8 +114,8 @@ export class Timetable {
               dj: 'Ramiro',
               notes: 'Salsa & Bachata<br>during shows'
             },
-            { room: 'Salsa', start: 23, duration: 2, dj: 'Julian the Duke' },
-            { room: 'Salsa', start: 25, duration: 2, dj: 'Fadi K' },
+            { room: 'Salsa', start: 23, duration: 2, dj: 'Fadi K' },
+            { room: 'Salsa', start: 25, duration: 2, dj: 'Julian the Duke' },
             { room: 'Cuban', start: 21, duration: 2, dj: 'Junior' },
             { room: 'Cuban', start: 23, duration: 2, dj: 'Davide' },
             { room: 'Cuban', start: 25, duration: 2, dj: 'Javier La Rosa' },
