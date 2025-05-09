@@ -34,8 +34,13 @@ export class Timetable {
           duration: 4,
           rooms: ['Mixed SBK'],
           slots: [
-            { room: 'Mixed SBK', start: 16, duration: 2, dj: 'Shahid' },
-            { room: 'Mixed SBK', start: 18, duration: 2, dj: 'Farsh' }
+            {
+              room: 'Mixed SBK',
+              start: 16,
+              duration: 4,
+              dj: 'Playlist',
+              notes: 'Various DJs'
+            }
           ]
         },
         {
@@ -235,7 +240,8 @@ export namespace Timetable {
     'Fadi K',
     'Moe Flex',
     'Roger Cracco',
-    'Junior'
+    'Junior',
+    'Playlist'
   ] as const;
   export type DJs = (typeof DJNames)[number];
 }

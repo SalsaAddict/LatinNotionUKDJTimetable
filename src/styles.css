@@ -1,3 +1,8 @@
 body {
   padding-top: 76px;
+  background-image: url('https://salsaaddict.github.io/LatinNotionUKDJTimetable/background.avif');
+}
+
+h1 {
+  text-shadow: 5px 5px 8px #000;
 }

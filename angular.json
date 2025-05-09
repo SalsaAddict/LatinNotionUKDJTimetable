@@ -104,7 +104,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "buildTarget": "LatinNotionUKDJTimetable:build:production"
+            "buildTarget": "LatinNotionUKDJTimetable:build:production",
+            "baseHref": "/LatinNotionUKDJTimetable/"
           }
         }
       }
