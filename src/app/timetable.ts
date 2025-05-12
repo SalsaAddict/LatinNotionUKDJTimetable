@@ -119,7 +119,7 @@ export class Timetable {
               room: 'Salsa',
               start: 21,
               duration: 2,
-              dj: 'Ramiro',
+              dj: 'Massimo',
               notes: 'Salsa & Bachata<br>during shows'
             },
             { room: 'Salsa', start: 23, duration: 2, dj: 'Fadi K' },
