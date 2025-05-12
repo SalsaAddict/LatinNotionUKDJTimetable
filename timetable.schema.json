@@ -1,0 +1,167 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "definitions": {
+        "Timetable.DJs": {
+            "enum": [
+                "Ami Emirato",
+                "Chino",
+                "Daniel Chong",
+                "Davide",
+                "Fadi K",
+                "Farsh",
+                "Javier La Rosa",
+                "Jeydikson",
+                "Julian MrM",
+                "Julian the Duke",
+                "Junior",
+                "Massimo",
+                "Mauricio",
+                "Moe Flex",
+                "Oreo Sensual",
+                "Peynao",
+                "Pierre",
+                "Playlist",
+                "Qas",
+                "Ramiro",
+                "Roger Cracco",
+                "Shahid",
+                "Shark",
+                "Super Dixon"
+            ],
+            "type": "string"
+        },
+        "Timetable.Days": {
+            "enum": [
+                "Friday",
+                "Saturday",
+                "Sunday",
+                "Thursday"
+            ],
+            "type": "string"
+        },
+        "Timetable.IDay": {
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/Timetable.Days"
+                },
+                "sessions": {
+                    "items": {
+                        "$ref": "#/definitions/Timetable.ISession"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name",
+                "sessions"
+            ],
+            "type": "object"
+        },
+        "Timetable.ISession": {
+            "additionalProperties": false,
+            "properties": {
+                "duration": {
+                    "type": "number"
+                },
+                "name": {
+                    "$ref": "#/definitions/Timetable.Sessions"
+                },
+                "rooms": {
+                    "items": {
+                        "enum": [
+                            "Bachata",
+                            "Cuban",
+                            "Kizomba",
+                            "Mixed SBK",
+                            "Salsa"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "slots": {
+                    "items": {
+                        "$ref": "#/definitions/Timetable.ISlot"
+                    },
+                    "type": "array"
+                },
+                "start": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "duration",
+                "name",
+                "rooms",
+                "slots",
+                "start"
+            ],
+            "type": "object"
+        },
+        "Timetable.ISlot": {
+            "additionalProperties": false,
+            "properties": {
+                "dj": {
+                    "$ref": "#/definitions/Timetable.DJs"
+                },
+                "duration": {
+                    "type": "number"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "room": {
+                    "$ref": "#/definitions/Timetable.Rooms"
+                },
+                "start": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "dj",
+                "duration",
+                "room",
+                "start"
+            ],
+            "type": "object"
+        },
+        "Timetable.Rooms": {
+            "enum": [
+                "Bachata",
+                "Cuban",
+                "Kizomba",
+                "Mixed SBK",
+                "Salsa"
+            ],
+            "type": "string"
+        },
+        "Timetable.Sessions": {
+            "enum": [
+                "Afternoon Social",
+                "Boat Party",
+                "Party Night"
+            ],
+            "type": "string"
+        }
+    },
+    "properties": {
+        "$schema": {
+            "const": "./timetable.schema.json",
+            "type": "string"
+        },
+        "days": {
+            "items": {
+                "$ref": "#/definitions/Timetable.IDay"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "$schema",
+        "days"
+    ],
+    "type": "object"
+}
+

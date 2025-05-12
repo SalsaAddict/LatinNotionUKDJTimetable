@@ -1,7 +1,442 @@
 {
-  "Days": [
+  "$schema": "./timetable.schema.json",
+  "days": [
     {
-      "Date": ""
+      "name": "Thursday",
+      "sessions": [
+        {
+          "duration": 4,
+          "name": "Boat Party",
+          "rooms": ["Bachata", "Salsa"],
+          "slots": [
+            {
+              "dj": "Ramiro",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 20
+            },
+            {
+              "dj": "Pierre",
+              "duration": 1,
+              "room": "Salsa",
+              "start": 22
+            },
+            {
+              "dj": "Shahid",
+              "duration": 1,
+              "room": "Salsa",
+              "start": 23
+            },
+            {
+              "dj": "Pierre",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 20
+            },
+            {
+              "dj": "Shahid",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 21
+            },
+            {
+              "dj": "Daniel Chong",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 22
+            },
+            {
+              "dj": "Roger Cracco",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 23
+            }
+          ],
+          "start": 20
+        }
+      ]
+    },
+    {
+      "name": "Friday",
+      "sessions": [
+        {
+          "duration": 4,
+          "name": "Afternoon Social",
+          "rooms": ["Mixed SBK"],
+          "slots": [
+            {
+              "dj": "Playlist",
+              "duration": 4,
+              "notes": "Various DJs",
+              "room": "Mixed SBK",
+              "start": 16
+            }
+          ],
+          "start": 16
+        },
+        {
+          "duration": 7,
+          "name": "Party Night",
+          "rooms": ["Bachata", "Salsa", "Cuban", "Kizomba"],
+          "slots": [
+            {
+              "dj": "Shahid",
+              "duration": 2,
+              "notes": "Jack & Jill<br>Pro Competition",
+              "room": "Bachata",
+              "start": 21
+            },
+            {
+              "dj": "Pierre",
+              "duration": 2,
+              "room": "Bachata",
+              "start": 23
+            },
+            {
+              "dj": "Shahid",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 25
+            },
+            {
+              "dj": "Peynao",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 26
+            },
+            {
+              "dj": "Farsh",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 27
+            },
+            {
+              "dj": "Ramiro",
+              "duration": 2,
+              "notes": "Salsa & Bachata<br>during competition",
+              "room": "Salsa",
+              "start": 21
+            },
+            {
+              "dj": "Julian the Duke",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 23
+            },
+            {
+              "dj": "Mauricio",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 25
+            },
+            {
+              "dj": "Massimo",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 21
+            },
+            {
+              "dj": "Javier La Rosa",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 23
+            },
+            {
+              "dj": "Junior",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 25
+            },
+            {
+              "dj": "Qas",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 21
+            },
+            {
+              "dj": "Jeydikson",
+              "duration": 1,
+              "room": "Kizomba",
+              "start": 23
+            },
+            {
+              "dj": "Shark",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 24
+            },
+            {
+              "dj": "Super Dixon",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 26
+            }
+          ],
+          "start": 21
+        }
+      ]
+    },
+    {
+      "name": "Saturday",
+      "sessions": [
+        {
+          "duration": 6,
+          "name": "Afternoon Social",
+          "rooms": ["Mixed SBK"],
+          "slots": [
+            {
+              "dj": "Davide",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 14
+            },
+            {
+              "dj": "Junior",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 16
+            },
+            {
+              "dj": "Farsh",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 18
+            }
+          ],
+          "start": 14
+        },
+        {
+          "duration": 7,
+          "name": "Party Night",
+          "rooms": ["Bachata", "Salsa", "Cuban", "Kizomba"],
+          "slots": [
+            {
+              "dj": "Oreo Sensual",
+              "duration": 2,
+              "notes": "Shows",
+              "room": "Bachata",
+              "start": 21
+            },
+            {
+              "dj": "Ramiro",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 23
+            },
+            {
+              "dj": "Julian MrM",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 24
+            },
+            {
+              "dj": "Chino",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 25
+            },
+            {
+              "dj": "Daniel Chong",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 26
+            },
+            {
+              "dj": "Shahid",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 27
+            },
+            {
+              "dj": "Pierre",
+              "duration": 2,
+              "notes": "Salsa & Bachata<br>during shows",
+              "room": "Salsa",
+              "start": 21
+            },
+            {
+              "dj": "Fadi K",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 23
+            },
+            {
+              "dj": "Julian the Duke",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 25
+            },
+            {
+              "dj": "Junior",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 21
+            },
+            {
+              "dj": "Davide",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 23
+            },
+            {
+              "dj": "Javier La Rosa",
+              "duration": 2,
+              "room": "Cuban",
+              "start": 25
+            },
+            {
+              "dj": "Super Dixon",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 21
+            },
+            {
+              "dj": "Qas",
+              "duration": 1,
+              "room": "Kizomba",
+              "start": 23
+            },
+            {
+              "dj": "Shark",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 24
+            },
+            {
+              "dj": "Jeydikson",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 26
+            }
+          ],
+          "start": 21
+        }
+      ]
+    },
+    {
+      "name": "Sunday",
+      "sessions": [
+        {
+          "duration": 6,
+          "name": "Afternoon Social",
+          "rooms": ["Mixed SBK"],
+          "slots": [
+            {
+              "dj": "Farsh",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 14
+            },
+            {
+              "dj": "Davide",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 16
+            },
+            {
+              "dj": "Chino",
+              "duration": 2,
+              "room": "Mixed SBK",
+              "start": 18
+            }
+          ],
+          "start": 14
+        },
+        {
+          "duration": 6,
+          "name": "Party Night",
+          "rooms": ["Bachata", "Salsa", "Cuban", "Kizomba"],
+          "slots": [
+            {
+              "dj": "Pierre",
+              "duration": 2,
+              "notes": "Jack & Jill<br>Open Competition",
+              "room": "Bachata",
+              "start": 21
+            },
+            {
+              "dj": "Julian MrM",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 23
+            },
+            {
+              "dj": "Chino",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 24
+            },
+            {
+              "dj": "Oreo Sensual",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 25
+            },
+            {
+              "dj": "Farsh",
+              "duration": 1,
+              "room": "Bachata",
+              "start": 26
+            },
+            {
+              "dj": "Ami Emirato",
+              "duration": 2,
+              "notes": "Salsa & Bachata<br>during competition",
+              "room": "Salsa",
+              "start": 21
+            },
+            {
+              "dj": "Julian the Duke",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 23
+            },
+            {
+              "dj": "Fadi K",
+              "duration": 2,
+              "room": "Salsa",
+              "start": 25
+            },
+            {
+              "dj": "Davide",
+              "duration": 3,
+              "room": "Cuban",
+              "start": 21
+            },
+            {
+              "dj": "Moe Flex",
+              "duration": 3,
+              "room": "Cuban",
+              "start": 24
+            },
+            {
+              "dj": "Jeydikson",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 21
+            },
+            {
+              "dj": "Super Dixon",
+              "duration": 1,
+              "room": "Kizomba",
+              "start": 23
+            },
+            {
+              "dj": "Shark",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 24
+            },
+            {
+              "dj": "Qas",
+              "duration": 2,
+              "room": "Kizomba",
+              "start": 26
+            }
+          ],
+          "start": 21
+        }
+      ]
     }
   ]
 }
