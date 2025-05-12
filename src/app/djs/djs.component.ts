@@ -25,7 +25,7 @@ export class DJsComponent implements OnInit {
       }
     }
   }
-  isBusySession(session: Timetable.Session) {
+  isBusySession(session: Timetable.ISession) {
     let found = false;
     for (let i = 0; i < session.slots.length; i++) {
       if (session.slots[i].dj === this.system.djName) {
@@ -35,7 +35,7 @@ export class DJsComponent implements OnInit {
     }
     return found;
   }
-  slots(session: Timetable.Session) {
+  slots(session: Timetable.ISession) {
     return session.slots
       .filter((slot) => {
         return slot.dj === this.system.djName;

@@ -36,14 +36,14 @@ export class TimetableComponent implements OnInit {
   get day() {
     return this.system.timetable.days[this.system.dayIndex];
   }
-  hours(session: Timetable.Session) {
+  hours(session: Timetable.ISession) {
     let items: number[] = [];
     for (let i = 0; i < session.duration; i++) {
       items.push(session.start + i);
     }
     return items;
   }
-  slot(session: Timetable.Session, room: Timetable.Rooms, hour: number) {
+  slot(session: Timetable.ISession, room: Timetable.Rooms, hour: number) {
     let item = session.slots.find((item) => {
       if (item.room !== room) return false;
       if (hour < item.start) return false;

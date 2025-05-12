@@ -1,0 +1,1 @@
+typescript-json-schema .\tsconfig.json Timetable.ITimetable -o .\public\timetable.schema.json --noExtraProps --required --strictNullChecks
