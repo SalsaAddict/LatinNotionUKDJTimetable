@@ -2,3 +2,7 @@
   max-height: 280px;
   overflow-y: auto;
 }
+
+.container {
+  max-width: 640px;
+}
